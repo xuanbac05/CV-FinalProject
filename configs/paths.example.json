@@ -1,12 +1,11 @@
 {
   "celeba": {
-    "images_dir": "/kaggle/input/celeba/img_align_celeba",
-    "attributes_file": "/kaggle/input/celeba/list_attr_celeba.txt",
-    "partition_file": "/kaggle/input/celeba/list_eval_partition.txt"
+    "images_dir": "/kaggle/input/datasets/jenninn/celeba/img_align_celeba/img_align_celeba",
+    "attributes_file": "/kaggle/input/datasets/jenninn/celeba/list_attr_celeba.txt",
+    "partition_file": "/kaggle/input/datasets/jenninn/celeba/list_eval_partition.txt"
   },
   "model": {
-    "sd_turbo_dir": "/kaggle/input/ACTUAL_KAGGLE_MODEL_PATH"
+    "sd_turbo_dir": "/kaggle/input/models/jenninn/sd-turbo/pytorch/diffusers-fp32/1"
   },
   "output_dir": "/kaggle/working/ChordEdit/outputs"
 }
-

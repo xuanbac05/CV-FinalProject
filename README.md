@@ -71,12 +71,12 @@ This section describes how to run the **Original ChordEdit** baseline (with prox
    - Under **Models**, attach your shared **SD-Turbo** Kaggle Model (`jenninn/sd-turbo`).
 
 ### 5.2 Clone the Repository and Install Dependencies
-In a notebook cell, clone your repository into `/kaggle/working/` and install dependencies:
+In a notebook cell, clone your repository into `/kaggle/working/` and ensure the required packages are installed (leaving Kaggle's pre-installed CUDA PyTorch intact):
 ```bash
 %cd /kaggle/working
-!git clone <YOUR_FORK_OR_REPO_URL> ChordEdit
+!git clone https://github.com/xuanbac05/CV-FinalProject.git ChordEdit
 %cd /kaggle/working/ChordEdit
-!pip install -q -r requirement.txt
+!pip install -q diffusers transformers accelerate pyyaml Pillow
 ```
 
 ### 5.3 Identify Mounted `/kaggle/input` Paths
@@ -95,12 +95,12 @@ from pathlib import Path
 
 paths_cfg = {
     "celeba": {
-        "images_dir": "/kaggle/input/celeba/img_align_celeba",
-        "attributes_file": "/kaggle/input/celeba/list_attr_celeba.txt",
-        "partition_file": "/kaggle/input/celeba/list_eval_partition.txt",
+        "images_dir": "/kaggle/input/datasets/jenninn/celeba/img_align_celeba/img_align_celeba",
+        "attributes_file": "/kaggle/input/datasets/jenninn/celeba/list_attr_celeba.txt",
+        "partition_file": "/kaggle/input/datasets/jenninn/celeba/list_eval_partition.txt",
     },
     "model": {
-        "sd_turbo_dir": "/kaggle/input/sd-turbo/pytorch/default/1",  # replace with actual path from Step 5.3
+        "sd_turbo_dir": "/kaggle/input/models/jenninn/sd-turbo/pytorch/diffusers-fp32/1",
     },
     "output_dir": "/kaggle/working/ChordEdit/outputs",
 }
